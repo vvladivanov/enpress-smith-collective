@@ -1,0 +1,93 @@
+.section-bottom {
+  position: relative;
+  background-color: $dark;
+  .bottom-apply-now {
+    background: url('../img/apply-now-background.jpg') no-repeat;
+    background-size: cover;
+    @include media-breakpoint-down('md') {
+      padding: 28px 0;
+    }
+    @include media-breakpoint-up('lg') {
+      margin-bottom: -24px;
+      padding: 69px 0 28px;
+    }
+    @include media-breakpoint-up('xl') {
+      padding: 69px 99px 28px 0;
+    }
+    
+    .card-apply-now {
+      color: $dark;
+      border-radius: 0;
+      border: 0;
+      background-color: $primary;
+      .card-body {
+        padding: 36px 20px;
+        max-width: 480px;
+        width: 100%;
+        margin-left: auto;
+        @include media-breakpoint-down('md') {
+          margin-left: auto;
+          margin-right: auto;
+          max-width: map-get($container-max-widths, 'md');
+        }
+        @include media-breakpoint-down('sm') {
+          max-width: map-get($container-max-widths, 'sm');
+        }
+      }
+      .btn {
+        padding: 7px 48px;
+      }
+    }
+  }
+  .bottom-subscribe {
+    color: $gray;
+    .card {
+      width: 525px;
+      max-width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      .card-body {
+        padding-top: 59px;
+        padding-bottom: 59px;
+      }
+    }
+    .heading {
+      .title {
+        font-size: 90px;
+      }
+    }
+    .btn {
+      padding: 7px 45.5px;
+    }
+  }
+  .timeline {
+    color: $dark;
+    &.timeline-left {
+      left: 30px;
+    }
+    .mark, .text, .icon {
+      margin-top: 28px;
+    }
+    .icon {
+      position: absolute;
+      top: 48%;
+      left: 50px;
+    }
+    bottom: 36px;
+  }
+
+  .subscription-form {
+    position: relative;
+
+    @include media-breakpoint-up('md') {
+      .submit-container {
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+    }
+
+  }
+
+
+}

@@ -1,0 +1,65 @@
+.site {
+  overflow: hidden;
+  opacity: 1;
+}
+
+@keyframes site-tent-progress {
+  from   {
+    left: 50%;
+    width: 0;
+  }
+  30%  {
+    left: 35%;
+    width: 30%; 
+  }
+  60%  {
+    left: 30%;
+    width: 40%;
+  }
+  to {
+    left: 25%;
+    width: 50%;
+  }
+}
+
+.site-tent {
+  display: block;
+  @include transition(all .4s);
+  background-color: $dark;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    width: 50%;
+    height: 1px;
+    background-color: rgba($white, .08);
+  }
+  &::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    height: 1px;
+    left: 25%;
+    width: 50%;
+    background-color: rgba($white, .24);
+    animation: site-tent-progress 4s;
+  }
+}
+
+.loading {
+  .site {
+    opacity: 0;
+  }
+  .site-tent {
+    z-index: 2000;
+    opacity: 1;
+  }
+}

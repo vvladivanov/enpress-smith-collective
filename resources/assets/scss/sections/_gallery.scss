@@ -1,0 +1,8 @@
+.section-gallery {
+  &:nth-last-child(2) {
+    margin-bottom: $spacer * 5;
+    @include media-breakpoint-down('md') {
+      margin-bottom: $spacer * 2.5;
+    }
+  }
+}

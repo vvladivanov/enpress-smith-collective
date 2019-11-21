@@ -1,0 +1,54 @@
+.section-introduction {
+  margin-bottom: -66px;
+  @include media-breakpoint-down('md'){
+    margin-bottom: 40px;
+  }
+  position: relative;
+  .title {
+    @include media-breakpoint-down('sm'){
+      font-size: 80px !important;
+    }
+  }
+  .subtitle {
+    @include media-breakpoint-down('sm'){
+      margin-bottom: 0;
+      font-size: 24px !important;
+    }
+  }
+  height: 820px;
+  @include media-breakpoint-down('md'){
+    height: 100%;
+  }
+  .btn {
+    padding: 7px 44.5px;
+    color: $white;
+    display: block;
+    margin-bottom: 24px;
+    @include media-breakpoint-up('md'){
+      display: inline-block;
+      margin-right: 20px;
+    }
+  }
+  .timeline {
+    top: 0%;
+    bottom: 10%;
+    background-color: $gray-700;
+    > .icon {
+      display: block;
+      position: absolute;
+      white-space: nowrap;
+      top: 23%;
+      right: $font-size-base * 3;
+    }
+    > .text {
+      left: -$font-size-base * 2;
+      top: 25%;
+      transform: translateX(-50%) rotate(90deg);
+    }
+    > .mark {
+      top: 25%;
+      background-color: $gray-700;
+      border: 3px solid $dark;
+    }
+  }
+}

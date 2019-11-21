@@ -1,0 +1,439 @@
+.gallery {
+  color: $dark;
+  display: flex;
+  position: relative;
+  @include media-breakpoint-up('lg') {
+    margin-left: 33px;
+    margin-right: 33px;
+  }
+  @include media-breakpoint-down('md') {
+    flex-direction: column-reverse;
+  }
+  .title {
+    color: $white;
+    @include media-breakpoint-down('sm'){
+      font-size: 80px !important;
+    }
+  }
+  .subtitle {
+    color: $danger;
+    @include media-breakpoint-down('sm'){
+      font-size: 24px !important;
+    }
+  }
+  .gallery-main {
+    @include media-breakpoint-up('lg') {
+      width: 50%;
+    }
+    position: relative;
+    z-index: 2;
+    .gallery-background {
+      z-index: -1;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: calc(100% + 240px);
+      height: 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+    
+    .gallery-content-field {
+      @include media-breakpoint-up('lg') {
+        max-width: 590px;
+        padding: 100px 20px;
+      }
+      @include media-breakpoint-down('md') {
+        padding: 40px 20px;
+        max-width: map-get($container-max-widths, 'md') - 26px;
+      }
+      @include media-breakpoint-down('sm') {
+        padding: 40px 20px;
+        max-width: map-get($container-max-widths, 'sm') - 26px;
+      }
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @include media-breakpoint-down('md') {
+      margin-right: $grid-gutter-width / 2;
+      &::before {
+        width: 100%;
+      }
+    }
+  }
+  .gallery-collection {
+    position: relative;
+    @include media-breakpoint-up('lg') {
+      width: 50%;
+    }
+    @include media-breakpoint-up('lg') {
+      margin-top: -35px;
+      margin-bottom: 0;
+    }
+    @include media-breakpoint-down('md') {
+      margin-left: $grid-gutter-width / 2;
+      margin-bottom: -20px;
+    }
+    z-index: 3;
+    .gallery-collection-display {
+      margin-bottom: 12px;
+      .gallery-item {
+        position: relative;
+        display: block;
+        @include media-breakpoint-up('xs') {
+          height: 0;
+          padding-bottom: 80%;
+        }
+        @include media-breakpoint-up('md') {
+          height: 636px;
+          padding-bottom: 0;
+        }
+        .gallery-image {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-size: cover;
+          background-position: center;
+        }
+      }
+    }
+    .gallery-control {
+      position: absolute;
+      bottom: 40px;
+      left: -136px;
+      @include media-breakpoint-down('sm') {
+        display: none;
+      }
+      .gallery-pagination {
+        display: flex;
+        font-size: 12px;
+        color: $white;
+        line-height: 2;
+        margin-left: 8px;
+      }
+      .gallery-mark {
+        text-align: center;
+      }
+      .gallery-dots {
+        .slick-dots {
+          position: relative;
+          bottom: inherit;
+          > li {
+            display: none;
+            &.slick-active {
+              display: block;
+            }
+            height: inherit;
+            width: inherit;
+            margin: 0;
+            button {
+              &:before {
+                display: none;
+              }
+              color: $white;
+              padding: 0;
+              line-height: 2;
+              height: inherit;
+              font-size: 12px;
+            }
+          }
+        }
+      }
+      .gallery-arrows {
+        display: flex;
+        width: 58px;
+        justify-content: space-between;
+        .slick-prev, .slick-next {
+          position: relative;
+          transform: inherit;
+          top: inherit;
+          &:before {
+            color: $white;
+          }
+          &:hover {
+            &:before {
+              color: rgba($white, 0.5);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.gallery-features {
+  .subtitle {
+    color: $white;
+  }
+  .gallery-main {
+    @include media-breakpoint-up('lg') {
+      min-width: 464px;
+    }
+    @include media-breakpoint-down('md'){
+      margin-top: -20px;
+    }
+    .gallery-background {
+      @include media-breakpoint-up('lg'){
+        width: calc(100vw - 150px);
+      }
+      @include media-breakpoint-down('md'){
+        width: 100%;
+      }
+      height: 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+    .gallery-content-field {
+      height: 100%;
+      @include media-breakpoint-up('lg') {
+        padding: 50px 45px 20px 50px;
+      }
+      @include media-breakpoint-down('md') {
+        padding-top: 145px;
+        padding-bottom: 30px;
+      }
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      max-width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      .gallery-content-main {
+        h3 {
+          font-size: 40px;
+          @include media-breakpoint-down('sm'){
+            font-size: 40px !important;
+          }
+        }
+        .title {
+          font-size: 90px;
+        }
+        
+      }
+      .gallery-content-feature {
+        margin-top: 20px;
+        .title {
+          font-size: 90px;
+        }
+        ul {
+          list-style-type: none;
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          margin-bottom: 0;
+          line-height: 2.125;
+          padding-left: 0;
+          li {
+            line-height: 1.2;
+            width: 50%;
+            margin-bottom: $spacer;
+          }
+        }
+      }
+    }
+  }
+  .gallery-collection {
+    position: relative;
+    @include media-breakpoint-up('lg') {
+      width: calc(100vw - 544px);
+    }
+    .gallery-collection-display {
+      width: 100%;
+      margin-bottom: 0;
+      .gallery-item {
+        @include media-breakpoint-up('xl') {
+          height: 770px;
+          padding-bottom: 0;
+        }
+        @include media-breakpoint-up('lg'){
+          height: 800px;
+        }
+      }
+    }
+    .gallery-collection-nav {
+      margin-top: -6px;
+      margin-bottom: -6px;
+      .slick-list {
+        height: 152px;
+        padding-top: 16px !important;
+      }
+      @include media-breakpoint-down('md'){
+        display: none;
+      }
+      @include media-breakpoint-up('lg') {
+        width: 484px;
+      }
+      @include media-breakpoint-up('xl') {
+        width: 726px;
+      }
+      margin-left: auto;
+      display: block;
+      .gallery-collection-nav-item {
+        transition: transform .3s;
+        background-size: cover !important;
+        background-position: center !important;
+        height: 121px !important;
+        width: 143px !important;
+        margin-left: 4px; 
+      }
+      .slick-active {
+        .gallery-collection-nav-item {
+          transform: scale(1.256);
+        }
+      }
+    }
+    .gallery-control {
+      left: 0;
+      bottom: 40px;
+      @include media-breakpoint-down('md'){
+        display: block;
+        bottom: -80px;
+        .gallery-arrows {
+          display: none;
+        }
+      }
+    }
+  }
+}
+.two-column-feature-image-left {
+  flex-direction: row-reverse;
+  @include media-breakpoint-down('md') {
+    flex-direction: column-reverse;
+  }
+  .gallery-background {
+    height: 110%;
+  }
+  .subtitle {
+    color: $white;
+  }
+  .gallery-main {
+    .gallery-background {
+      @include media-breakpoint-up('lg') {
+        left: -240px;
+      }
+      background-repeat: no-repeat;
+    }
+  }
+  .gallery-collection {
+    .gallery-collection-display {
+      .gallery-item {
+        @include media-breakpoint-up('lg') {
+          height: 813px;
+          padding-bottom: 0;
+        }
+      }
+    }
+  }
+  .gallery-control {
+    bottom: 20px !important;
+    right: -100px;
+    left: auto !important;
+  }
+}
+.three-column-feature-image {
+  position: relative;
+  flex-direction: row-reverse;
+  @include media-breakpoint-down('md') {
+    flex-direction: column-reverse;
+  }
+  .subtitle {
+    color: $danger;
+    @include media-breakpoint-down('sm'){
+      font-size: 38.4px !important;
+    }
+  }
+  .title {
+    color: $danger;
+    @include media-breakpoint-down('sm'){
+      font-size: 128px !important;
+    }
+  }
+  .gallery-main {
+    @include media-breakpoint-up('lg') {
+      width: 100%;
+    }
+    .gallery-background {
+      right: 0;
+      left: 0;
+      @include media-breakpoint-up('lg') {
+        left: 20px;
+      }
+      width: auto;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+    .gallery-content-field {
+      display: flex;
+      align-items: center;
+      @include media-breakpoint-up('lg') {
+        min-height: 740px;
+        max-width: 944px;
+        margin-left: 463px;
+        padding: 30px;
+      }
+      @include media-breakpoint-up('xl') {
+        margin-left: 499px;
+      }
+      @include media-breakpoint-down('sm'){
+        padding: 50px 20px 30px 20px;
+      }
+      .content {
+        display: flex;
+        @include media-breakpoint-down('sm') {
+          flex-direction: column;
+        }
+        .left-content {
+          width: 100%;
+          margin-right: 20px;
+          @include media-breakpoint-up('xl') {
+            margin-right: 63px;
+            width: 476px;
+          }
+          @include media-breakpoint-up('md'){
+            width: 300px;
+          }
+        }
+        .right-content {
+          width: 345px !important;
+          @include media-breakpoint-down('lg') {
+            width: 100% !important;
+          }
+          margin: 0;
+          padding: 0;
+          color: $danger;
+          li {
+            position: relative;
+            @include media-breakpoint-down('sm') {
+              margin-left: 8px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .gallery-collection {
+    @include media-breakpoint-up('lg') {
+      position: absolute;
+      left: 0;
+      width: 453px;
+      margin-bottom: 0;
+    }
+    .gallery-collection-display {
+      .gallery-item {
+        @include media-breakpoint-up('md') {
+          height: 734px;
+          padding-bottom: 0;
+        }
+      }
+    }
+  }
+  .gallery-control {
+    bottom: 20px !important;
+    right: -100px;
+    left: auto !important;
+  }
+}

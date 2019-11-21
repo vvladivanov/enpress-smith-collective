@@ -1,0 +1,115 @@
+.site-footer {
+  background-color: $white;
+  color: $dark;
+  font-size: $font-size-sm;
+  line-height: 2;
+  display: flex;
+  justify-content: space-between;
+  @include media-breakpoint-up('lg') {
+    padding: 87px 55px 42px 44px;
+    align-items: flex-end;
+  }
+  @include media-breakpoint-down('md') {
+    padding: 34px 40px 26px;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  a {
+    color: $dark;
+    &:hover {
+      color: lighten($dark, 20%);
+    }
+  }
+  
+  .footer-logos {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    @include media-breakpoint-down('md') {
+      margin-bottom: 35px;
+    }
+    li {
+      display: flex;
+      align-items: center;
+      &:not(:last-of-type):after {
+        display: block;
+        content: "";
+        @include media-breakpoint-up('lg') {
+          background-color: rgba($gray-500, .25);
+        }
+        width: 1px;
+        height: 38px;
+        margin: 0 15.5px;
+      }
+      a {
+        display: block;
+      }
+    }
+    .logo-smith-collective {
+      img {
+        width: 183px;
+        height: auto;
+      }
+    }
+    .logo-jil {
+      img {
+        width: 79px;
+      }
+    }
+  }
+  .footer-copyright {
+    @include media-breakpoint-down('md') {
+      margin-bottom: 35px;
+    }
+  }
+  .footer-menus {
+    display: flex;
+    .navigation-menu {
+      display: flex;
+      padding: 0;
+      margin: 0;
+      @include media-breakpoint-down('xs') {
+        li {
+          &:not(:first-of-type):before {
+            content: "" !important;
+            margin: 0 !important;
+          }
+        }
+      }
+      list-style-type: none;
+      li {
+        &:not(:first-of-type):before {
+          content: "•";
+          margin: 0 5px;
+        }
+      }
+      li {
+        white-space: nowrap;
+      }
+      @include media-breakpoint-down('sm'){
+        li {
+          padding: 0 7px;
+        }
+      }
+    }
+    .policy-menu {
+      padding: 0;
+      margin: 0;
+      list-style-type: none;
+      font-weight: $font-weight-bold;
+      @include media-breakpoint-down('xs') {
+        align-items: center;
+      }
+      padding-left: 0;
+      &:before {
+        @include media-breakpoint-up('sm') {
+          margin: 0 14px;
+          content: "•"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,290 @@
+.hero-content {
+  h4 {
+    margin-top: $spacer * 3;
+    font-family: $font-family-base;
+    color: $warning;
+  }
+  h1 {
+    @include media-breakpoint-down('md'){
+      font-size: 38.4px;
+    }
+  }
+}
+
+.section-hero-home {
+  display: block;
+  position: relative;
+  .hero-content {
+    background-size: cover;
+    background-position: center;
+    height: 0;
+    padding-bottom: 47%;
+    margin-left: calc(100vw - 83%);
+    .hero-spacer {
+      position: relative;
+      @include media-breakpoint-down('sm') {
+        height: calc(38vh - 100%);
+      }
+      @include media-breakpoint-down('xs') {
+        height: calc(25vh - 100%);
+      }
+      video {
+        @include media-breakpoint-up('md') {
+          width: 100%;
+          height: auto;
+        }
+        @include media-breakpoint-down('sm') {
+          position: absolute;
+          width: auto;
+          height: 100%;
+          margin: auto;
+          left: 50%;
+          top: 50%;
+          transform: translateX(-50%) translateY(-50%);
+        }
+      }
+    }
+    @include media-breakpoint-down('sm'){
+      margin-left: calc(100vw - 90%);
+      padding-bottom: 400px;
+    }
+    @include media-breakpoint-down('xs'){
+      margin-left: 50px;
+      padding-bottom: 250px;
+    }
+    .title-content {
+      position: relative;
+      z-index: 2;
+      margin-top: -20%;
+      margin-left: -8%;
+      @include media-breakpoint-down('sm'){
+        margin-top: -10%;
+      }
+      h3 {
+        font-size: 37px;
+        margin-bottom: 0;
+        @include media-breakpoint-down('sm'){
+          font-size: 16.65px;
+          
+        }
+      }
+      .animation-titles {
+        .animation-title {
+          position: relative;
+          display: inline-block;
+          height: 100%;
+        }
+        @include media-breakpoint-up('lg') {
+          height: 200px;
+          margin: -25px 0 -45px -35px;
+        }
+        @include media-breakpoint-down('md') {
+          height: 150px;
+          margin: -15px 0 -30px -30px;
+        }
+        @include media-breakpoint-down('sm') {
+          height: 110px;
+          margin: -15px 0 -20px -20px;
+        }
+        @include media-breakpoint-down('xs') {
+          height: 75px;
+          margin: -15px 0 -20px -15px;
+        }
+      }
+      h1 {
+        margin-top: -18px;
+        @include media-breakpoint-down('sm'){
+          font-size: 31.5px;
+          margin-top: -8px;
+        }
+      }
+    }
+  }
+  .timeline {
+    z-index: 2;
+    bottom: -55%;
+    background-color: $gray-700;
+    > .text {
+      top: 15%;
+    }
+    > .mark {
+      top: 15%;
+      background-color: $gray-700;
+      border: 3px solid $dark;
+    }
+  }
+}
+.section-hero-404 {
+  .parallax-full {
+    .parallax-background {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      &:before {
+        background-image: url('../img/building-background.jpg');
+        content: "";
+        position: absolute;
+        left: -5%;
+        top: -5%;
+        width: 110%;
+        height: 110%;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+  height: calc(100vh - 307px);
+  @include media-breakpoint-down('sm'){
+    height: 600px;
+  }
+  position: relative;
+  h3 {
+    font-size: 33px;
+    position: relative;
+    z-index: 3;
+    @include media-breakpoint-down('sm'){
+      font-size: 24px;
+    }
+  }
+  .subtitle {
+    position: relative;
+    z-index: 3;
+    font-size: 63px;
+    @include media-breakpoint-down('sm'){
+      font-size: 38.4px;
+    }
+  }
+  .title {
+    display: inline-block;
+    font-size: 108px;
+    position: relative;
+    &:after {
+      position: absolute;
+      content: "";
+      display: flex;
+      width: 103%;
+      height: 2px;
+      left: -15px;
+      bottom: 40%;
+      border-bottom: 2px solid $white;
+    }
+  }
+}
+.section-hero-about {
+  position: relative;
+  @include media-breakpoint-up('lg') {
+    margin-bottom: -66px;
+    min-height: 820px;
+  }
+  @include media-breakpoint-down('md'){
+    margin-bottom: 40px;
+  }
+  .subtitle {
+    @include media-breakpoint-down('sm'){
+      font-size: 38.4px;
+    }
+  }
+  .timeline {
+    top: 10%;
+    bottom: 10%;
+    background-color: $gray-700;
+    > .text {
+      left: -$font-size-base * 2;
+      top: 50%;
+      transform: translateX(-50%) rotate(90deg);
+    }
+    > .mark {
+      top: 50%;
+      background-color: $gray-700;
+      border: 3px solid $dark;
+    }
+  }
+}
+
+.section-hero-main {
+  position: relative;
+  .timeline {
+    @include media-breakpoint-down('lg'){
+      display: none;
+    }
+    z-index: 2;
+    background-color: $gray-700;
+    > .text {
+      top: 20%;
+    }
+    > .mark {
+      top: 20%;
+      background-color: $gray-700;
+      border: 3px solid $dark;
+    }
+  }
+  .hero-main {
+    @include media-breakpoint-up('lg') {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+    }
+  }
+  .hero-image {
+    position: relative;
+    z-index: 4;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 0;
+    @include media-breakpoint-up('lg') {
+      height: 720px;
+    }
+    @include media-breakpoint-up('xl') {
+      height: 822px;
+    }
+    @include media-breakpoint-down('md') {
+      height: 0;
+      padding-bottom: 60%;
+      margin-left: 20px;
+      background-position: center top;
+    }
+    @include media-breakpoint-down('sm') {
+      padding-bottom: 67%;
+    }
+  }
+
+  .card-weather {
+    z-index: 10;
+    @include media-breakpoint-up('lg') {
+      position: absolute;
+      right: 50%;
+      left: 0;
+      bottom: 0;  
+      margin-right: -70px;
+    }
+    @include media-breakpoint-up('xl') {
+      margin-right: 80px;
+    }
+    @include media-breakpoint-down('md') {
+      margin-top: 20px;
+      margin-right: $grid-gutter-width/2;
+    }
+  }
+}
+
+.other-hero-view {
+  .hero-content {
+    @include media-breakpoint-up('xl') {
+      margin-left: -30px;
+    }
+  }
+  .timeline {
+    bottom: 86px;
+  }
+}
+
+.living-here-view{
+  .timeline {
+    bottom: -65%;
+  }
+}

@@ -1,0 +1,6 @@
+.section-retail-map {
+  margin-top: -27px;
+  @include media-breakpoint-down('sm'){
+    margin-top: 0;
+  }
+}

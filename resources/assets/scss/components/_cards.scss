@@ -1,0 +1,135 @@
+.card-options {
+  display: block;
+  .card-content {
+    color: $dark;
+    position: relative;
+    z-index: 2;
+    margin-right: 27px;
+    .subtitle {
+      font-size: 50px;
+      line-height: 1;
+      margin-bottom: 4px;
+      @include media-breakpoint-down('lg'){
+        font-size: 38.4px;
+      }
+    }
+    ul {
+      padding-left: 16px;
+    }
+  }
+  .card-image {
+    height: 0;
+    padding-bottom: 75%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+    margin-left: 27px;
+    margin-top: -38px;
+    .link {
+      padding: 13px;
+      position: absolute;
+      right: -10px;
+      bottom: -10px;
+      width: 57px;
+      height: 57px;
+    }
+  }
+}
+
+.card-option {
+  position: relative;
+  .btn {
+    position: absolute;
+    bottom: 0;
+  }
+}
+.card-contact {
+  border-bottom: 3px solid $danger;
+  border-right: 3px solid $danger;
+  .btn {
+    padding: 7px 67px;
+  }
+}
+.card-eventbrite {
+  width: 100%;
+  .card-image {
+    display: block;
+    background-size: cover;
+    background-position: center;
+    height: 0;
+    padding-bottom: 55%;
+    border-radius: 2px;
+  }
+  .card-body {
+    padding: 30px 15px;
+    p {
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+  }
+}
+
+.card {
+  &.card-weather {
+    display: flex;
+    flex-direction: row;
+    color: $dark;
+    .card-header {
+      width: 195px;
+      display: flex;
+      align-items: center;
+      background-color: $primary;
+      @include media-breakpoint-down('sm') {
+        width: auto;
+        padding: 20px 16px;
+      }
+    }
+    .card-body {
+      display: flex;
+      align-items: center;
+      background-color: $warning;
+      @include media-breakpoint-down('xs') {
+        font-weight: $font-weight-medium;
+        font-size: 13.35px;
+      }
+    }
+    .card-icon {
+      width: 66px;
+      height: 66px;
+      @include media-breakpoint-down('xs') {
+        width: 52px;
+        height: 52px;
+      }
+    }
+    .card-title {
+      margin-left: 20px;
+      @include media-breakpoint-down('xs') {
+        margin-left: 15px;
+      }
+      margin-bottom: 0;
+      font-weight: $font-weight-bold;
+      .card-temperature {
+        font-size: 28px;
+        @include media-breakpoint-down('xs') {
+          font-size: 22.58px;
+        }
+        line-height: 1;
+      }
+      .card-state {
+        @include media-breakpoint-down('xs') {
+          font-size: $font-size-sm;
+        }
+        line-height: 1;
+      }
+    }
+    .weather-activity-long {
+      &:before {
+        content: ' – ';
+      }
+      &:empty {
+        display: none;
+      }
+    }
+  }
+}

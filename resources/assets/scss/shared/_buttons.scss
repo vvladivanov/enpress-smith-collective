@@ -1,0 +1,12 @@
+.btn {
+  font-size: $font-size-base - 1px;
+  letter-spacing: .94px;
+  text-transform: uppercase;
+  min-width: 190px;
+}
+.btn-outline-danger {
+  color: $black;
+  &:hover {
+    color: $white !important;
+  }
+}

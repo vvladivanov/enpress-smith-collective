@@ -1,0 +1,122 @@
+.section-apply {
+  background-color: $dark;
+  color: $gray;
+  position: relative;
+  display: flex;
+  width: 100vw;
+  .close {
+    opacity: 1;
+    z-index: 20;
+    position: absolute;
+    top: 32px;
+    right: 27px;
+    @include media-breakpoint-down('md') {
+      right: 22px;
+    }
+    width: 15px;
+    height: 15px;
+    background-size: contain;
+    background: url('../img/icons/close.svg') no-repeat center;
+    &:hover {
+      opacity: .5;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+  .apply-body {
+    width: 100%;
+    display: flex;
+    @include media-breakpoint-down('md') {
+      flex-direction: column;
+    }
+  }
+  .apply-image {
+    background-size: cover;
+    background-position: center;
+    @include media-breakpoint-up('lg') {
+      min-height: 100vh;
+      flex: 1;
+    }
+    @include media-breakpoint-down('md') {
+      display: none;
+    }
+  }
+  .apply-main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @include media-breakpoint-up('lg') {
+      padding: 64px 48px;
+      width: 50%;
+      min-width: 800px;
+      min-height: 100vh;
+    }
+    @include media-breakpoint-up('xl') {
+      padding: 96px 72px 45px;
+    }
+    @include media-breakpoint-down('md') {
+      max-width: map-get($container-max-widths, 'md');
+      margin-left: auto;
+      margin-right: auto;
+      padding: 48px 20px;
+    }
+    @include media-breakpoint-down('sm') {
+      max-width: map-get($container-max-widths, 'sm');
+      padding: 26px 20px;
+    }
+  }
+  .apply-brand {
+    display: inline-block;
+    img {
+      height: 34px;
+      width: auto;
+    }
+  }
+  .apply-content {
+    margin: 28px 0;
+  }
+  .d-flex {
+    .btn {
+      @include media-breakpoint-down('sm') {
+        min-width: auto;
+        flex: 1;
+      }
+    }
+  }
+
+  .application-form {
+    position: relative;
+
+    .submit-wrap {
+      text-align: right;
+    }
+
+    .checkbox-container {
+      margin: 2em 0;
+      @include media-breakpoint-up('lg') {
+        margin: 5em 0;
+      }
+    }
+
+    .nf-response-msg {
+      background: $dark;
+      bottom: 0;
+      left: 0;
+      padding-top: 1em;
+      position: absolute;
+      width: 100%;
+      z-index: 10;
+      &:empty {
+        display: none;
+      }
+    }
+  }
+
+  .application-form-back {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+}

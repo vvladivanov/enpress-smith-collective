@@ -1,0 +1,96 @@
+.nf-form-wrap {
+    
+    .hide,
+    .hidden-container,
+    .label-hidden .nf-field-label ,
+    .nf-form-errors,
+    .nf-form-fields-required ,
+    .nf-form-hp {
+        display: none;
+    }
+
+    .nf-field-label label {
+        margin-bottom: 0;
+    }
+
+    .nf-error-wrap {
+        color: $danger;
+        font-size: 0.85em;
+        margin-top: 0.4em;
+        text-align: left;
+    }
+        
+    input[type="password"],
+    input[type="tel"],
+    input[type="email"],
+    input[type="text"],
+    textarea {
+        @extend .form-control;
+    }
+
+    input[type="button"] {
+        @extend .btn, .btn-outline-primary;
+    }
+
+    .checkbox-container {
+        position: relative;
+        text-align: left;
+
+        .nf-field-element {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            margin-top: -0.1em;
+        }
+
+        .nf-error-wrap {
+            margin-left: 48px;
+        }
+
+        .nf-field-label {
+            left: 0;
+            position: relative;
+            top: 0;
+            z-index: 2;
+
+            label {
+                display: block;
+                padding-left: 48px;
+                line-height: 1.25;
+            }
+        }
+
+        input {
+            position: absolute;
+            left: -100em;
+        }
+
+        .checkbox-icon {
+            @extend .custom-control-label;
+            display: block;
+            min-height: 28px;
+            margin-left: 48px;
+            position: relative;
+            
+            &:before {
+                border-radius: 50%;
+                border: 2px solid #19CEB6;
+            }
+        }
+
+        :checked + .checkbox-icon:after {
+            background-image: url('../img/icons/tick.svg');
+        }
+    }
+
+    nf-field {
+        display: block;
+        & + nf-field {
+            margin-top: 24px;
+        }
+    }
+
+}
+
+

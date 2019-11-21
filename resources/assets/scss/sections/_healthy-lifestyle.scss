@@ -1,0 +1,28 @@
+.section-healthy-lifestyle {
+  .title-content {
+    h3 {
+      font-size: 21px;
+    }
+    h1 {
+      font-size: 40px;
+    }
+    .title {
+      display: inline-block;
+      font-size: 54px;
+      position: relative;
+      &:after {
+        position: absolute;
+        display: flex;
+        content: "";
+        width: 104%;
+        height: 1.15px;
+        left: -5px;
+        bottom: 36%;
+        border-bottom: 1.15px solid $white;
+      }
+      @include media-breakpoint-up('xl'){
+        font-size: 69px;
+      }
+    }
+  }
+}

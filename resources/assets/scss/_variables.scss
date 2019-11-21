@@ -1,0 +1,77 @@
+$font-maps: (
+  'CamptonBold':                        ( family: 'Campton',           file: 'Campton-Bold',              weight: 700, style: normal ),
+  'CamptonBook':                        ( family: 'Campton',           file: 'Campton-Book',              weight: 400, style: normal ),
+  'CamptonMedium':                      ( family: 'Campton',           file: 'Campton-Medium',            weight: 500, style: normal ),
+  'CamptonSemiBold':                    ( family: 'Campton',           file: 'Campton-SemiBold',          weight: 600, style: normal ),
+  'ChronicleDisplayBlack':              ( family: 'ChronicleDisplay',  file: 'ChronicleDisplay-Black',    weight: 900, style: normal ),
+  'WildSpirit':                         ( family: 'WildSpirit',        file: 'WildSpirit',                weight: 400, style: normal ),
+);
+
+$font-weight-maps: (
+  'normal': $font-weight-normal,
+  'black': $font-weight-black,
+  'medium': $font-weight-medium,
+  'bold' : $font-weight-bold,
+  'semibold': $font-weight-semibold,
+);
+
+$heading-maps: (
+  'h1': ('font-size': $h1-font-size, 'letter-spacing': 0.15px, 'line-height': 1),
+  'h2': ('font-size': $h2-font-size, 'letter-spacing': 0.1px,'line-height': 1.125),
+  'h3': ('font-size': $h3-font-size, 'letter-spacing': 0.08px, 'line-height': 1.125),
+  'h4': ('font-size': $h4-font-size, 'letter-spacing': 0.08px, 'line-height': 1.125),
+  'h5': ('font-size': $h5-font-size, 'letter-spacing': 0.1px, 'line-height': 1.125),
+  'h6': ('font-size': $h6-font-size, 'letter-spacing': 0.09px, 'line-height': 1)
+);
+
+$heading-extended-maps: (
+  'h3': ('font-size': $h3-font-size, 'letter-spacing': 0.08px, 'line-height': 1.125),
+);
+
+$font-size-maps: (
+  'xl': ('font-size': ($font-size-base * 1.475), 'line-height': 1.125), 
+  'lg': ('font-size': ($font-size-base * 1.125)),
+  'base': ('font-size': $font-size-base),
+  'sm': ('font-size': $font-size-sm),
+);
+
+$header-z-index: 1000;
+$icon-size-maps: (
+  'xl': 94px,
+  'lg': 66px,
+  'md':   45px,
+  'base': 36px,
+  'sm':   30px,
+  'xs':   24px
+);
+$icon-name-maps: (
+  'arrow-black',
+  'bed',
+  'calendar-3',
+  'calendar-6',
+  'calendar-soon',
+  'clear-day',
+  'clear-day-black',
+  'clear-night',
+  'clear-night-black',
+  'cloudy',
+  'cloudy-black',
+  'facebook',
+  'fog',
+  'fog-black',
+  'insta',
+  'leaf',
+  'partly-cloudy-day',
+  'partly-cloudy-day-black',
+  'partly-cloudy-night',
+  'partly-cloudy-night-black',
+  'play',
+  'rain',
+  'rain-black',
+  'sleet',
+  'sleet-black',
+  'sunny',
+  'sunny-black',
+  'wind',
+  'wind-black',
+);

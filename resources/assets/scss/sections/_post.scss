@@ -1,0 +1,10 @@
+.section-post {
+  .subtitle {
+    @include media-breakpoint-down('sm') {
+      font-size: 38.4px;
+    }
+  }
+  .container {
+    max-width: 1000px;
+  }
+}

@@ -1,0 +1,37 @@
+.section-apartment {
+  img {
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.5;
+  }
+  .apartment-content {
+    max-width: 560px; 
+    .subtitle {
+      @include media-breakpoint-down('sm'){
+        font-size: 24px;
+      }
+    }
+    .title {
+      @include media-breakpoint-down('sm'){
+        font-size: 80px !important;
+      }
+    }
+  }
+  .video {
+    cursor: pointer;
+    position: relative;
+    img {
+      display: block;
+      height: auto;
+      opacity: 1;
+    }
+  }
+}
+
+.fancybox-apartment {
+  .fancybox-content {
+    img {
+      opacity: .5;
+    }
+  }
+}

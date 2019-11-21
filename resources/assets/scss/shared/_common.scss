@@ -1,0 +1,107 @@
+body {
+  // -webkit-font-smoothing: antialiased;
+  // -moz-osx-font-smoothing: grayscale;
+  letter-spacing: .03px;
+}
+img {
+  height: auto;
+}
+
+.subtitle {
+  font-family: ChronicleDisplay;
+  font-weight: $font-weight-black;
+}
+h4 {
+  color: $warning;
+  font-family: $font-family-campton;
+  font-weight: $font-weight-normal;
+  @include media-breakpoint-down('sm'){
+    font-size: 25px !important;
+  }
+}
+.title {
+  font-family: WildSpirit;
+  font-size: 128px;
+  letter-spacing: 0.27px;
+  line-height: 1;
+  @include media-breakpoint-down('md'){
+    font-size: 54px !important;
+  }
+}
+
+.form-control {
+  font-size: $font-size-base - 1px;
+}
+
+.control-group {
+  position: relative;
+  margin-bottom: $form-group-margin-bottom;
+  @include media-breakpoint-up('sm') {
+    .control-group-append {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  }
+  @include media-breakpoint-down('xs') {
+    .control-group-append {
+      margin-top: 13px;
+      > * {
+        width: 100%;
+      }
+    }
+  }  
+}
+
+.form-caption {
+  font-size: 13px;
+}
+
+.custom-checkbox {
+  input[type="checkbox"] ~ .custom-control-label {
+    line-height: $custom-control-indicator-size;
+    &::before {
+      border: 2px solid $primary;
+    }
+  }
+}
+
+.custom-select {
+  &.custom-select-icon {
+    padding-left: $custom-select-padding-x + 28px;
+    background-size: 23px 23px, $custom-select-bg-size !important;
+    &.icon-calendar {
+      background: 
+        url('../img/icons/calendar.svg') no-repeat left 12px center,
+        $custom-select-bg $custom-select-indicator no-repeat right $custom-select-padding-x center;
+    }
+    &.icon-time {
+      background: 
+        url('../img/icons/time.svg') no-repeat left 12px center,
+        $custom-select-bg $custom-select-indicator no-repeat right $custom-select-padding-x center;
+    }
+  }
+}
+
+ul {
+  padding-left: 16px;
+  li {
+    padding-left: 8px;
+  }
+}
+
+.text-link {
+  color: inherit !important;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.lowercase {
+  text-transform: lowercase;
+}
+
+.hidden {
+  display: none;
+}

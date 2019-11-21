@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 26 26" style="enable-background:new 0 0 26 26;" xml:space="preserve">
+<g transform="translate(1 3)">
+	<defs>
+		<filter id="Adobe_OpacityMaskFilter" filterUnits="userSpaceOnUse" x="0" y="0" width="24" height="19">
+			<feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
+		</filter>
+	</defs>
+	<mask maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="19" id="calendar-b_1_">
+		<g style="filter:url(#Adobe_OpacityMaskFilter);">
+			<polygon id="calendar-a_1_" style="fill:#FFFFFF;" points="0,0 24,0 24,19 0,19 			"/>
+		</g>
+	</mask>
+	<path style="mask:url(#calendar-b_1_);fill:#19CEB6;" d="M22.536,5.772H1.464V2.849H5.71v0.646c0,0.395,0.328,0.715,0.732,0.715
+		s0.732-0.32,0.732-0.715V2.849h4.094v0.646c0,0.395,0.328,0.715,0.732,0.715s0.732-0.32,0.732-0.715V2.849h4.276v0.646
+		c0,0.395,0.328,0.715,0.732,0.715c0.404,0,0.732-0.32,0.732-0.715V2.849h4.064V5.772z M22.536,17.57h-0.74h-0.921H1.464V7.202
+		h21.072V17.57z M23.268,1.42h-4.796V0.715C18.472,0.32,18.144,0,17.74,0c-0.404,0-0.732,0.32-0.732,0.715V1.42h-4.276V0.715
+		C12.732,0.32,12.404,0,12,0s-0.732,0.32-0.732,0.715V1.42H7.174V0.715C7.174,0.32,6.846,0,6.442,0S5.71,0.32,5.71,0.715V1.42H0.732
+		C0.328,1.42,0,1.74,0,2.135v16.151C0,18.68,0.328,19,0.732,19h21.065h1.472C23.672,19,24,18.68,24,18.285V2.135
+		C24,1.74,23.672,1.42,23.268,1.42z"/>
+</g>
+</svg>

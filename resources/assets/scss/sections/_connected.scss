@@ -1,0 +1,105 @@
+.section-connected {
+  display: block;
+  position: relative;
+  .connected-map {
+    position: relative;
+    transition: 2s ease-out;
+    height: 0;
+    padding-bottom: 100%;
+    @include media-breakpoint-up('xl') {
+      width: 700px;
+      padding-bottom: 0;
+      height: 700px;
+    }
+    transform: scale(2);
+    svg {
+      position: absolute;
+      top: 0;
+      left: -5%;
+    }
+  }
+  .connected-content {
+    max-width: 560px;
+    @include media-breakpoint-down('md'){
+      max-width: map-get($container-max-widths, 'md');
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @include media-breakpoint-down('sm'){
+      max-width: map-get($container-max-widths, 'sm');
+    }
+  }
+  .title {
+    @include media-breakpoint-down('sm'){
+      font-size: 80px !important;
+    }
+  }
+  .subtitle {
+    @include media-breakpoint-down('sm'){
+      font-size: 24px !important;
+    }
+  }
+  .timeline {
+    top: 10%;
+    bottom: 10%;
+    background-color: $gray-700;
+    > .timeline-content {
+      transition: top 2s ease-out; // cubic-bezier(0, 0.68, 0.26, 0.99);
+      display: block;
+      position: absolute;
+      white-space: nowrap;
+      top: 30%;
+      right: 20px;
+      .weather {
+        margin-left: auto;
+        width: 144px;
+        height: 53px;
+        border: 2px solid rgba($pink, 0.33);
+        border-radius: 100px 0 0 100px;
+        line-height: 1;
+        p {
+          font-size: 19.2px;
+        }
+        span {
+          font-size: 10.24px;
+        }
+        .icon {
+          transition: transform 2s ease-out;
+        }
+      }
+      > .mark {
+        position: absolute;
+        display: block;
+        content: "";
+        width: 12px;
+        height: 12px;
+        right: -25px;
+        top: 20px;
+        border-radius: 12px;
+        background-color: $gray-700;
+        border: 3px solid $dark;
+      }
+    }
+  }
+  .btn {
+    padding: 7px 44.5px;
+  }
+
+  &.entered {
+    .connected-map {
+      transform: scale(1);
+    }
+    .timeline {
+      > .timeline-content {
+        top: 0;
+        .weather {
+          .icon-sunny,
+          .icon-clear-day,
+          .icon-clear-night {
+            transform: rotate(-360deg);
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+.section-social-culture {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  .parallax-full {
+    .parallax-background {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      &:before {
+        background-image: url('../img/building-background.jpg');
+        content: "";
+        position: absolute;
+        left: -5%;
+        top: -5%;
+        width: 110%;
+        height: 110%;
+        opacity: .38;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+  height: 860px;
+  @include media-breakpoint-down('md'){
+    height: 100%;
+  }
+  .timeline {
+    top: 5%;
+    bottom: 10%;
+    background-color: $gray-700;
+    > .text {
+      left: -$font-size-base * 2;
+      top: 30%;
+      transform: translateX(-50%) rotate(90deg);
+    }
+    > .mark {
+      top: 30%;
+      background-color: $gray-700;
+      border: 3px solid $dark;
+    }
+  }
+}

@@ -1,0 +1,54 @@
+.timeline {
+  @include media-breakpoint-down('md') {
+    display: none;
+  }
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background-color: $white;
+  > .icon {
+    position: absolute;
+    display: block;
+  }
+  &.timeline-left {
+    left: 40px;
+  }
+  &.timeline-right {
+    right: 40px;
+  }
+  > .text {
+    display: none;
+    font-size: $font-size-base;
+    display: block;
+    position: absolute;
+    white-space: nowrap;
+    top: 50%;
+    left: $font-size-base * 2;
+    transform: translateX(-50%) rotate(-90deg);
+  }
+  > .mark {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 12px;
+    height: 12px;
+    top: 50%;
+    left: -6px;
+    border-radius: 12px;
+    background-color: $dark;
+    border: 3px solid $primary;
+  }
+}
+
+.timeline-left {
+  .icon {
+    left: 48px;
+  }
+}
+
+.timeline-right {
+  .icon {
+    right: 48px;
+  }
+}

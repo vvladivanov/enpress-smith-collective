@@ -1,0 +1,53 @@
+
+.appointment {
+  display: block;
+  margin-bottom: 20px;
+  input {
+    display: none;
+    opacity: 0;
+  }
+
+  .appointment-body {
+    position: relative;
+    padding: 22px;
+    border: 2px solid $primary;
+    h5 {
+      color: $primary;
+    }
+    @include media-breakpoint-up('lg') {
+
+    }
+  }
+
+  .appointment-icons {
+    @include media-breakpoint-up('lg') {
+      padding-top: 78px;
+      padding-bottom: 10px;
+    }
+    .icon {
+      width: 41px;
+      height: 41px;
+    }
+  }
+
+  input:checked + .appointment-body {
+    background-color: $primary;
+    h5 {
+      color: $dark;
+    }
+    &:after {
+      display: block;
+      content: "";
+      position: absolute;
+      right: -5px;
+      top: -5px;
+      width: 50px;
+      height: 50px;
+      background-color: $white;
+      background-repeat: no-repeat;
+      background-image: url('../img/icons/tick.svg');
+      background-size: 27px 27px;
+      background-position: center;
+    }
+  }
+}

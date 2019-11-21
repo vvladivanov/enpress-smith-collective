@@ -1,0 +1,20 @@
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+@each $icon-name in $icon-name-maps {
+  .icon-#{$icon-name} {
+    background-image: url('../img/icons/' + $icon-name + '.svg');
+  }
+}
+
+@each $icon-size-key, $icon-size in $icon-size-maps {
+  .icon-#{$icon-size-key} {
+    width: $icon-size;
+    height: $icon-size;
+  }
+}

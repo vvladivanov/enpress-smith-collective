@@ -1,0 +1,25 @@
+.section-opportunities {
+  .retail-content {
+    .title {
+      font-size: 69px;
+      position: relative;
+      &:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 100%;
+        bottom: 40%;
+        border-bottom: 2px solid $warning;
+      }
+    }
+    .subtitle {
+      font-size: 40px;
+    }
+    h6 {
+      font-size: 21px;
+    }
+  }
+  .underline-link {
+    text-decoration: underline;
+  }
+}
